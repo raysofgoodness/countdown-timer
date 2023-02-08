@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // functions
 
     // auxiliary variables
-    const birthday = new Date(`${new Date().getFullYear()}-9-21T00:00:00.000Z`);
+    const birthday = new Date(Date.UTC(new Date().getFullYear(), 8, 21, 0, 0, 0, 0));
 
     const toCountingData = (endData) => {
         const timeline = Date.parse(endData) - Date.parse(new Date()),
