@@ -2,12 +2,25 @@
 
 window.addEventListener('DOMContentLoaded', () => {
     // UI Components
-    const animationContainer = document.querySelector("#animationContainer"),
+    const animationBirthday = document.querySelector(".animation-birthday"),
+          modalAnimation = document.querySelector('.modal-animation'),
           heading = document.querySelector('#heading');
 
 
-
     // functions
+
+    const startAnimation = (elem, url) => {
+        return bodymovin.loadAnimation({
+            container: elem,
+            rendered: 'svg',
+            loop: true,
+            autoplay: true,
+            path: url,
+        });
+    };
+
+    startAnimation(animationBirthday, 'animations/birthday.json');
+    startAnimation(modalAnimation, 'animations/questions.json');
 
     // auxiliary variables
     const birthday = new Date(Date.UTC(new Date().getFullYear(), 8, 21, 0, 0, 0, 0));
@@ -55,14 +68,6 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
     setClock('#timer', birthday);
-
-    const animation = bodymovin.loadAnimation({
-        container: animationContainer,
-        renderer: "svg",
-        loop: true,
-        autoplay: true,
-        path: "animations/birthday.json",
-    });
 
     const letters = heading.textContent.split('');
     heading.innerHTML = '';

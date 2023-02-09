@@ -10,50 +10,58 @@
     <title>Birthday timer</title>
 </head>
 <body>
-    <h1 class="main-heading" id="heading">
-        How many days until my birthday?
-    </h1>
+    <div class="content">
+        <h1 class="main-heading" id="heading">
+            How many days until my birthday?
+        </h1>
 
-    <div class="wrapper">
-        <div id="animationContainer"></div>
-    </div>
+        <div class="wrapper">
+            <div class="animation-birthday"></div>
+        </div>
 
-
-    <div class="timer-wrapper">
-        <ul class="timer" id="timer">
-            <li class="timer__item">
+        <div class="timer-wrapper">
+            <ul class="timer" id="timer">
+                <li class="timer__item">
                 <span class="timer__count" id="days">
                     20
                 </span>
-                <span class="timer__item-text">
+                    <span class="timer__item-text">
                     Days
                 </span>
-            </li>
-            <li class="timer__item">
+                </li>
+                <li class="timer__item">
                 <span class="timer__count" id="hours">
                     10
                 </span>
-                <span class="timer__item-text">
+                    <span class="timer__item-text">
                     Hours
                 </span>
-            </li>
-            <li class="timer__item">
+                </li>
+                <li class="timer__item">
                 <span class="timer__count" id="minutes">
                     54
                 </span>
-                <span class="timer__item-text">
+                    <span class="timer__item-text">
                     Minutes
                 </span>
-            </li>
-            <li class="timer__item">
+                </li>
+                <li class="timer__item">
                 <span class="timer__count" id="seconds">
                     15
                 </span>
-                <span class="timer__item-text">
+                    <span class="timer__item-text">
                     Seconds
                 </span>
-            </li>
-        </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="modal">
+            <div class="modal-content">
+                <h2>Something</h2>
+                <div class="modal-animation"></div>
+            </div>
+        </div>
     </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
